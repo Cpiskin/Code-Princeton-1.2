@@ -1,0 +1,25 @@
+public class CarLoan {
+    public static void main(String[] args) {
+        // Check if three command-line arguments are provided
+        if (args.length != 3) {
+            System.out.println("Usage: java CarLoan <P> <Y> <R>");
+            return;
+        }
+
+        // Parse the command-line arguments
+        double P = Double.parseDouble(args[0]);
+        int Y = Integer.parseInt(args[1]);
+        double R = Double.parseDouble(args[2]);
+
+        // Calculate monthly payment
+        int n = 12 * Y;
+        double r = (R / 100) / 12;
+
+        double numerator = P * r;
+        double denominator = 1 - Math.pow(1 + r, -n);
+        double monthlyPayment = numerator / denominator;
+
+        // Print monthly payment
+        System.out.println("Monthly Payment: $" + monthlyPayment);
+    }
+}
