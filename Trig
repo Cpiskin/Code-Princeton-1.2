@@ -1,0 +1,18 @@
+public class Trig {
+    public static void main(String[] args) {
+        double angle = 45.0; // Angle in degrees
+
+        // Convert angle to radians
+        double radians = Math.toRadians(angle);
+
+        // Calculate trigonometric functions
+        double sine = Math.sin(radians);
+        double cosine = Math.cos(radians);
+        double tangent = Math.tan(radians);
+
+        // Print results
+        System.out.println("Sine(" + angle + " degrees) = " + sine);
+        System.out.println("Cosine(" + angle + " degrees) = " + cosine);
+        System.out.println("Tangent(" + angle + " degrees) = " + tangent);
+    }
+}
