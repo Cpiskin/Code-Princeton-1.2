@@ -1,0 +1,29 @@
+public class YIQtoRGB {
+    public static void main(String[] args) {
+        // Check if three command-line arguments are provided
+        if (args.length != 3) {
+            System.out.println("Usage: java YIQtoRGB <Y> <I> <Q>");
+            return;
+        }
+
+        // Parse the command-line arguments
+        double Y = Double.parseDouble(args[0]);
+        double I = Double.parseDouble(args[1]);
+        double Q = Double.parseDouble(args[2]);
+
+        // Apply inverse transformation to get RGB
+        int R = (int) (Y + 0.956 * I + 0.621 * Q);
+        int G = (int) (Y - 0.272 * I - 0.647 * Q);
+        int B = (int) (Y - 1.106 * I + 1.703 * Q);
+
+        // Ensure RGB values are within 0-255 range
+        R = Math.max(0, Math.min(R, 255));
+        G = Math.max(0, Math.min(G, 255));
+        B = Math.max(0, Math.min(B, 255));
+
+        // Print RGB values
+        System.out.println("R = " + R);
+        System.out.println("G = " + G);
+        System.out.println("B = " + B);
+    }
+}
