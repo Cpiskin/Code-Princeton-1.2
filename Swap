@@ -1,0 +1,26 @@
+public class Swap {
+    public static void main(String[] args) {
+        // Check if two command-line arguments are provided
+        if (args.length != 2) {
+            System.out.println("Usage: java Swap <a> <b>");
+            return;
+        }
+
+        // Parse the command-line arguments
+        int a = Integer.parseInt(args[0]);
+        int b = Integer.parseInt(args[1]);
+
+        System.out.println("Before swapping:");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+
+        // Swapping using the swapping idiom
+        a = a + b;
+        b = a - b;
+        a = a - b;
+
+        System.out.println("After swapping:");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+    }
+}
