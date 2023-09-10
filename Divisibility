@@ -1,0 +1,16 @@
+public class Divisibility {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter your 1st number ==>> ");
+		int a = scan.nextInt();
+		System.out.println("Enter your 2nd number ==>> ");
+		int b = scan.nextInt();
+		
+		boolean isDivisible = (a%7==0 && b%7==0);
+		System.out.println(isDivisible);
+		
+	}
+
+}
